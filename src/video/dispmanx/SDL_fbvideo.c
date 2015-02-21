@@ -586,8 +586,8 @@ static void DISPMANX_DirectUpdate(_THIS, int numrects, SDL_Rect *rects)
 	vc_dispmanx_element_change_source(dispvars->update, 
 	   dispvars->element, dispvars->resources[flip_page]);
 	
-	vc_dispmanx_update_submit_sync( dispvars->update );		
-	//vc_dispmanx_update_submit(dispvars->update, NULL, NULL); 
+	//vc_dispmanx_update_submit_sync( dispvars->update );
+	vc_dispmanx_update_submit(dispvars->update, NULL, NULL);
 	//**Acaba actualización***
 	flip_page = !flip_page;
 	
